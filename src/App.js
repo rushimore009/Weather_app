@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import {Helmet} from "react-helmet";
 
 function App() {
+
+  
+
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
 
@@ -19,6 +23,12 @@ function App() {
 
   return (
     <div className="app Back">
+      <Helmet>
+  <meta charSet="utf-8" />
+  <title>Weather</title>
+  <link rel="canonical" href="http://mysite.com/example" />
+  <meta name="description" content="Helmet application" />
+</Helmet>
       <div className="search">
         <input
           value={location}
